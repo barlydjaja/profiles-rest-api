@@ -127,5 +127,5 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
 
-STATIC_ROUTE = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROUTE = 'static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
