@@ -27,8 +27,9 @@ DEBUG = bool(int(os.environ.get("DEBUG", 1)))
 
 ALLOWED_HOSTS = ['*']
 
-
-
+#CORS SETTING
+CORS_ORIGIN_ALLOW_ALL = True 
+CORS_ALLOW_CREDENTIALS = False
 
 # Application definition
 INSTALLED_APPS = [
@@ -52,7 +53,6 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 
@@ -130,6 +130,3 @@ AUTH_USER_MODEL = 'profiles_api.UserProfile'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-#CORS SETTING
-CORS_ORIGIN_ALLOW_ALL = True 
-CORS_ALLOW_CREDENTIALS = True
